@@ -1,4 +1,4 @@
-let vasya = {
+let Vasya = {
 	name: "Вася",
 	sayHello: function sayHello() {
 		alert(`Привет, меня зовут ${this.name}.`);
@@ -6,4 +6,4 @@ let vasya = {
 }
 
 
-vasya.sayHello();
+Vasya.sayHello();

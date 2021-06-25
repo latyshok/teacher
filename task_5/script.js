@@ -1,4 +1,3 @@
-
 alert(guestArr());
 
 function guestArr() {

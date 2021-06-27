@@ -15,10 +15,10 @@ let someUsers = men.filter(item => item.name != "Kolya");
 alert(getCommonAge(someUsers));
 
 
-
 function getCommonAge(men) {
-	let newArr = men.reduce((sum, item) => sum + item.age, 0)
-	return newArr;
+	return  men.reduce((sum, item) => sum + item.age, 0)	
 }
+
+
 
 

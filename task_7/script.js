@@ -1,44 +1,26 @@
-let users = [{
-	name: "Кирилл",
-	age: 17,
-	auth: ['kirich', '12'],
-	sayHi() {
-		alert(`Добро пожаловать, ${this.name}!`)
-	}
-}, {
-	name: "Олег",
-	age: 24,
-	auth: ['oleg', '34'],
-	sayHi() {
-		alert(`Добро пожаловать, ${this.name}!`)
-	}
-}, {
-	name: "Ваня",
-	age: 87,
-	auth: ['ivan', '56'],
-	sayHi() {
-		alert(`Добро пожаловать, ${this.name}!`)
-	}
-}, {
-	name: "Дима",
-	age: 20,
-	auth: ['dima', '78'],
-	sayHi() {
-		alert(`Добро пожаловать, ${this.name}!`)
-	}
-}, {
-	name: "Радик",
-	age: 11,
-	auth: ['radik', '90'],
-	sayHi() {
-		alert(`Добро пожаловать, ${this.name}!`)
-	}
-}]
+let kirill = new User("Кирилл", 17, ['kirill', '12'],);
+let oleg = new User("Олег", 24, ['oleg', '34'],);
+let ivan = new User("Ваня", 65, ['ivan', '56'],);
+let dima = new User("Дима", 20, ['dima', '78'],);
+let radik = new User("Радик", 11, ['radik', '90'],);
+
+let users = [kirill, oleg, ivan, dima, radik]
 
 let login = prompt("Введите логин.");
 let password = prompt("Введите пароль.");
 
 showMessage(users);
+
+
+
+function User(name, age, auth) {
+	this.name = name;
+	this.age = age;
+	this.auth = auth;
+	this.sayHi = function () {
+		alert(`Добро пожаловать, ${this.name}!`)
+	}
+}
 
 function showMessage(users) {
 

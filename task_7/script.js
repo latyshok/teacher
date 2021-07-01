@@ -1,4 +1,4 @@
-let user = [{
+let users = [{
 	name: "Кирилл",
 	age: 17,
 	auth: ['kirich', '12'],
@@ -35,18 +35,18 @@ let user = [{
 	}
 }]
 
-getMassege(user);
+let login = prompt("Введите логин.");
+let password = prompt("Введите пароль.");
 
-function getMassege(user) {
-	let login = prompt("Введите логин.");
-	let password = prompt("Введите пароль.");
+showMessage(users);
 
-	user.map(function (item) {
+function showMessage(user) {
 
+	for (let item of users) {
 		if (item.auth[0] == login && item.auth[1] == password) {
 
 			if (item.age < 18) {
-				alert('посещение сайта возможно только с 18 лет.');
+				alert('Посещение сайта возможно только с 18 лет.');
 			}
 
 			if (item.age > 18) {
@@ -54,7 +54,7 @@ function getMassege(user) {
 			}
 
 		}
-	})
+	}
 }
 
 

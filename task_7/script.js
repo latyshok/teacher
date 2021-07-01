@@ -40,17 +40,17 @@ let password = prompt("Введите пароль.");
 
 showMessage(users);
 
-function showMessage(user) {
+function showMessage(users) {
 
-	for (let item of users) {
-		if (item.auth[0] == login && item.auth[1] == password) {
+	for (let user of users) {
+		if (user.auth[0] == login && user.auth[1] == password) {
 
-			if (item.age < 18) {
+			if (user.age < 18) {
 				alert('Посещение сайта возможно только с 18 лет.');
 			}
 
-			if (item.age > 18) {
-				item.sayHi();
+			if (user.age > 18) {
+				user.sayHi();
 			}
 
 		}
